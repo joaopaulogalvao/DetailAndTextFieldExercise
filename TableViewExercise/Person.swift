@@ -10,10 +10,12 @@ import Foundation
 
 class Person {
   var name: String
+  var lastName: String
   var age: Int
   
-  init (name: String, age: Int){
+  init (name: String, lastName: String, age: Int){
     self.name = name
+    self.lastName = lastName
     self.age = age
   }
   
