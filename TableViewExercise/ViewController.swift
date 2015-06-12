@@ -27,21 +27,21 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     self.tableView.dataSource = self
     
     //Create Basketball player objects
-    var jordan = Person(name: "Michael Jordan", age: 45)
-    var johnson = Person(name: "Magic Johnson", age: 50)
-    var bird = Person(name: "Larry Bird", age: 60)
-    var bryant = Person(name: "Kobe Bryant", age: 36)
-    var james = Person(name: "Lebron James", age: 34)
+    var jordan = Person(name: "Michael", lastName:"Jordan", age: 45)
+    var johnson = Person(name: "Magic Johnson",lastName:"Johnson", age: 50)
+    var bird = Person(name: "Larry", lastName:"Bird",age: 60)
+    var bryant = Person(name: "Kobe",lastName:"Bryant", age: 36)
+    var james = Person(name: "Lebron",lastName:"James", age: 34)
     
     //Add Basketball players objects to the Array
      greatBasketPlayers = [jordan,johnson,bird,bryant,james]
     
     //Create Football player objects
-    var sherman = Person(name: "Richard Sherman", age: 29)
-    var wilson = Person(name: "Russell Wilson", age: 30)
-    var lynch = Person(name: "Marshawn Lynch", age: 27)
-    var chancellor = Person(name: "Kameron Chancellor", age: 34)
-    var graham = Person(name: "Jimmy Graham", age: 32)
+    var sherman = Person(name: "Richard",lastName:"Sherman", age: 29)
+    var wilson = Person(name: "Russell",lastName:" Wilson", age: 30)
+    var lynch = Person(name: "Marshawn", lastName:"Lynch", age: 27)
+    var chancellor = Person(name: "Kameron",lastName:"Chancellor", age: 34)
+    var graham = Person(name: "Jimmy",lastName:"Graham", age: 32)
     
     //Add Football players objects to the Array
     greatFootBallPlayers = [sherman,wilson,lynch,chancellor,graham]
@@ -68,9 +68,9 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
   //Title for headers
   func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     if section == 0 {
-      return "Great Basketball Players (Name:Age)"
+      return "Great Basketball Players (Name:Last Name:Age)"
     } else {
-      return "Great Football Players(Name:Age)"
+      return "Great Football Players(Name:Last Name:Age)"
     }
   }
   
@@ -83,7 +83,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
       
       //Display players names
       let nameToDisplay = self.greatBasketPlayers[indexPath.row]
-      cell.textLabel?.text = nameToDisplay.name
+      cell.textLabel?.text = "\(nameToDisplay.name) \(nameToDisplay.lastName)"
       
       //Convert ages to String
       var myAgeToDisplay = String(nameToDisplay.age)
@@ -93,7 +93,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
       
       //Display players names
       let nameToDisplay = self.greatFootBallPlayers[indexPath.row]
-      cell.textLabel?.text = nameToDisplay.name
+      cell.textLabel?.text = "\(nameToDisplay.name) \(nameToDisplay.lastName)"
       
       //Convert ages to String
       var myAgeToDisplay = String(nameToDisplay.age)
