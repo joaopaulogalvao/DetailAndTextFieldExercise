@@ -105,11 +105,19 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbs-SA-oWk">
+                                <rect key="frame" x="352" y="329" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="cbs-SA-oWk" firstAttribute="leading" secondItem="NrH-H3-Wkb" secondAttribute="trailing" constant="31" id="DJJ-6U-KqI"/>
                             <constraint firstItem="NrH-H3-Wkb" firstAttribute="leading" secondItem="dif-6c-ntM" secondAttribute="leading" id="EDM-lG-IgX"/>
                             <constraint firstItem="NrH-H3-Wkb" firstAttribute="top" secondItem="dif-6c-ntM" secondAttribute="bottom" constant="19" id="EVA-Rz-4ft"/>
+                            <constraint firstItem="cbs-SA-oWk" firstAttribute="baseline" secondItem="NrH-H3-Wkb" secondAttribute="baseline" id="H0B-31-sf2"/>
                             <constraint firstAttribute="centerY" secondItem="dif-6c-ntM" secondAttribute="centerY" id="ZYD-kA-odf"/>
                             <constraint firstAttribute="centerX" secondItem="dif-6c-ntM" secondAttribute="centerX" id="twz-7G-5N4"/>
                         </constraints>
