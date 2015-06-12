@@ -113,10 +113,15 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
       let selectedIndexPath = self.tableView.indexPathForSelectedRow()
       
       //grab the selected person using the indexPath as the index in the players array
-      let selectedPlayer = self.greatBasketPlayers[selectedIndexPath!.row]
+      let selectedBasketballPlayer = self.greatBasketPlayers[selectedIndexPath!.row]
+      let selectedFootballPlayer = self.greatFootBallPlayers[selectedIndexPath!.row]
       
       //Set destinationViewController player propery to reference the selected player
-      personDetailViewController.selectedPlayer = selectedPlayer
+      if selectedIndexPath!.section == 0{
+        personDetailViewController.selectedPlayer = selectedBasketballPlayer
+      }else{
+        personDetailViewController.selectedPlayer = selectedFootballPlayer
+      }
       
     }
     
