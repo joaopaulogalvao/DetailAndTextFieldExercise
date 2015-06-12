@@ -12,6 +12,7 @@ class DetailViewController: UIViewController {
   
   @IBOutlet weak var labelName: UILabel!
   @IBOutlet weak var labelLastName: UILabel!
+  @IBOutlet weak var labelAge: UILabel!
   
   var selectedPlayer: Person!
 
@@ -19,6 +20,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
       self.labelName.text = self.selectedPlayer.name
       self.labelLastName.text = self.selectedPlayer.lastName
+      self.labelAge.text = "\(self.selectedPlayer.age)"
 
         // Do any additional setup after loading the view.
     }

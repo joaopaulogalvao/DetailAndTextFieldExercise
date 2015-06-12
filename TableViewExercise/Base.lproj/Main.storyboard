@@ -123,6 +123,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="labelAge" destination="cbs-SA-oWk" id="jYO-2o-geu"/>
                         <outlet property="labelLastName" destination="NrH-H3-Wkb" id="v1e-4s-Iq1"/>
                         <outlet property="labelName" destination="dif-6c-ntM" id="wQm-0p-Qg9"/>
                     </connections>
