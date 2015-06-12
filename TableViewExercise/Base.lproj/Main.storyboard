@@ -58,7 +58,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="drT-zv-zi1" kind="show" identifier="ShowDetailSegue" id="cQI-ET-CzG"/>
+                                            <segue destination="drT-zv-zi1" kind="show" identifier="ShowDetailSegue" id="XTb-k9-aC7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -92,7 +92,27 @@
                     <view key="view" contentMode="scaleToFill" id="WCF-oT-5cl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dif-6c-ntM">
+                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NrH-H3-Wkb">
+                                <rect key="frame" x="279" y="329" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NrH-H3-Wkb" firstAttribute="leading" secondItem="dif-6c-ntM" secondAttribute="leading" id="EDM-lG-IgX"/>
+                            <constraint firstItem="NrH-H3-Wkb" firstAttribute="top" secondItem="dif-6c-ntM" secondAttribute="bottom" constant="19" id="EVA-Rz-4ft"/>
+                            <constraint firstAttribute="centerY" secondItem="dif-6c-ntM" secondAttribute="centerY" id="ZYD-kA-odf"/>
+                            <constraint firstAttribute="centerX" secondItem="dif-6c-ntM" secondAttribute="centerX" id="twz-7G-5N4"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tjh-Iy-Wd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
