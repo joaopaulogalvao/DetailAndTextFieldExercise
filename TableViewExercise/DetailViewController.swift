@@ -10,11 +10,15 @@ import UIKit
 
 class DetailViewController: UIViewController {
   
+  @IBOutlet weak var labelName: UILabel!
+  @IBOutlet weak var labelLastName: UILabel!
   
   var selectedPlayer: Person!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+      self.labelName.text = self.selectedPlayer.name
+      self.labelLastName.text = self.selectedPlayer.lastName
 
         // Do any additional setup after loading the view.
     }

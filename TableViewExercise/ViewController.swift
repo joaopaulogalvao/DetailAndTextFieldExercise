@@ -28,7 +28,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     //Create Basketball player objects
     var jordan = Person(name: "Michael", lastName:"Jordan", age: 45)
-    var johnson = Person(name: "Magic Johnson",lastName:"Johnson", age: 50)
+    var johnson = Person(name: "Magic",lastName:"Johnson", age: 50)
     var bird = Person(name: "Larry", lastName:"Bird",age: 60)
     var bryant = Person(name: "Kobe",lastName:"Bryant", age: 36)
     var james = Person(name: "Lebron",lastName:"James", age: 34)

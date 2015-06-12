@@ -114,6 +114,10 @@
                             <constraint firstAttribute="centerX" secondItem="dif-6c-ntM" secondAttribute="centerX" id="twz-7G-5N4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelLastName" destination="NrH-H3-Wkb" id="v1e-4s-Iq1"/>
+                        <outlet property="labelName" destination="dif-6c-ntM" id="wQm-0p-Qg9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tjh-Iy-Wd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
