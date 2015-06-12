@@ -102,7 +102,25 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     }
     return cell
   }
-
+  
+  override func  prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+    if segue.identifier == "ShowDetailSegue"{
+      
+      let personDetailViewController = segue.destinationViewController as! DetailViewController
+      
+      //grab the selected indexPath from the TableView
+      let selectedIndexPath = self.tableView.indexPathForSelectedRow()
+      
+      //grab the selected person using the indexPath as the index in the players array
+      let selectedPlayer = self.greatBasketPlayers[selectedIndexPath!.row]
+      
+      //Set destinationViewController player propery to reference the selected player
+      personDetailViewController.selectedPlayer = selectedPlayer
+      
+    }
+    
+  }
 
 }
 

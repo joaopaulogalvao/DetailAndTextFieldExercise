@@ -9,6 +9,9 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+  
+  
+  var selectedPlayer: Person!
 
     override func viewDidLoad() {
         super.viewDidLoad()
