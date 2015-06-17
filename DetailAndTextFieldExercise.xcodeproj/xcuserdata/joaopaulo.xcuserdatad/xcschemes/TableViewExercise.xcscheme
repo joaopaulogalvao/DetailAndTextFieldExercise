@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6CD973B51B27DB1E009D911B"
-               BuildableName = "TableViewExercise.app"
-               BlueprintName = "TableViewExercise"
-               ReferencedContainer = "container:TableViewExercise.xcodeproj">
+               BuildableName = "DetailAndTextFieldExercise.app"
+               BlueprintName = "DetailAndTextFieldExercise"
+               ReferencedContainer = "container:DetailAndTextFieldExercise.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6CD973CA1B27DB1F009D911B"
-               BuildableName = "TableViewExerciseTests.xctest"
-               BlueprintName = "TableViewExerciseTests"
-               ReferencedContainer = "container:TableViewExercise.xcodeproj">
+               BuildableName = "DetailAndTextFieldExerciseTests.xctest"
+               BlueprintName = "DetailAndTextFieldExerciseTests"
+               ReferencedContainer = "container:DetailAndTextFieldExercise.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6CD973CA1B27DB1F009D911B"
-               BuildableName = "TableViewExerciseTests.xctest"
-               BlueprintName = "TableViewExerciseTests"
-               ReferencedContainer = "container:TableViewExercise.xcodeproj">
+               BuildableName = "DetailAndTextFieldExerciseTests.xctest"
+               BlueprintName = "DetailAndTextFieldExerciseTests"
+               ReferencedContainer = "container:DetailAndTextFieldExercise.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6CD973B51B27DB1E009D911B"
-            BuildableName = "TableViewExercise.app"
-            BlueprintName = "TableViewExercise"
-            ReferencedContainer = "container:TableViewExercise.xcodeproj">
+            BuildableName = "DetailAndTextFieldExercise.app"
+            BlueprintName = "DetailAndTextFieldExercise"
+            ReferencedContainer = "container:DetailAndTextFieldExercise.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6CD973B51B27DB1E009D911B"
-            BuildableName = "TableViewExercise.app"
-            BlueprintName = "TableViewExercise"
-            ReferencedContainer = "container:TableViewExercise.xcodeproj">
+            BuildableName = "DetailAndTextFieldExercise.app"
+            BlueprintName = "DetailAndTextFieldExercise"
+            ReferencedContainer = "container:DetailAndTextFieldExercise.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6CD973B51B27DB1E009D911B"
-            BuildableName = "TableViewExercise.app"
-            BlueprintName = "TableViewExercise"
-            ReferencedContainer = "container:TableViewExercise.xcodeproj">
+            BuildableName = "DetailAndTextFieldExercise.app"
+            BlueprintName = "DetailAndTextFieldExercise"
+            ReferencedContainer = "container:DetailAndTextFieldExercise.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
