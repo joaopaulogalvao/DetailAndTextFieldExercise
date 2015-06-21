@@ -10,9 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController,UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
-  @IBOutlet weak var labelName: UILabel!
-  @IBOutlet weak var labelLastName: UILabel!
-  @IBOutlet weak var labelAge: UILabel!
+  
   @IBOutlet weak var txtFieldFirstName: UITextField!
   @IBOutlet weak var txtFieldLastName: UITextField!
   
@@ -23,8 +21,10 @@ class DetailViewController: UIViewController,UITextFieldDelegate, UIImagePickerC
     
     self.txtFieldFirstName.delegate = self
     self.txtFieldLastName.delegate = self
+    
     self.txtFieldFirstName.tag == 0
     self.txtFieldLastName.tag == 1
+    
     self.txtFieldFirstName.text = self.selectedPlayer.name
     self.txtFieldLastName.text = self.selectedPlayer.lastName
     
@@ -47,9 +47,9 @@ class DetailViewController: UIViewController,UITextFieldDelegate, UIImagePickerC
   
   func textFieldDidEndEditing(textField: UITextField) {
     if textField.tag == 0 {
-      self.selectedPlayer.name = textField.text
+      self.selectedPlayer.name = self.txtFieldFirstName.text
     } else {
-      self.selectedPlayer.lastName = textField.text
+      self.selectedPlayer.lastName = self.txtFieldLastName.text
     }
   }
   
