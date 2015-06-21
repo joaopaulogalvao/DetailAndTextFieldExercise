@@ -22,8 +22,8 @@ class DetailViewController: UIViewController,UITextFieldDelegate, UIImagePickerC
     self.txtFieldFirstName.delegate = self
     self.txtFieldLastName.delegate = self
     
-    self.txtFieldFirstName.tag == 0
-    self.txtFieldLastName.tag == 1
+    self.txtFieldFirstName.tag = 0
+    self.txtFieldLastName.tag = 1
     
     self.txtFieldFirstName.text = self.selectedPlayer.name
     self.txtFieldLastName.text = self.selectedPlayer.lastName
