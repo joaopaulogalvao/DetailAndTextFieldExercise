@@ -8,28 +8,51 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController,UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
   @IBOutlet weak var labelName: UILabel!
   @IBOutlet weak var labelLastName: UILabel!
   @IBOutlet weak var labelAge: UILabel!
+  @IBOutlet weak var txtFieldFirstName: UITextField!
+  @IBOutlet weak var txtFieldLastName: UITextField!
   
   var selectedPlayer: Person!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      self.labelName.text = self.selectedPlayer.name
-      self.labelLastName.text = self.selectedPlayer.lastName
-      self.labelAge.text = "\(self.selectedPlayer.age)"
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-
-
+    self.txtFieldFirstName.delegate = self
+    self.txtFieldLastName.delegate = self
+    self.txtFieldFirstName.tag == 0
+    self.txtFieldLastName.tag == 1
+    self.txtFieldFirstName.text = self.selectedPlayer.name
+    self.txtFieldLastName.text = self.selectedPlayer.lastName
+    
+    
+    // Do any additional setup after loading the view.
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+  
+  func textFieldShouldReturn(textField: UITextField) -> Bool {
+    
+    textField.resignFirstResponder()
+    
+    return false
+    
+  }
+  
+  func textFieldDidEndEditing(textField: UITextField) {
+    if textField.tag == 0 {
+      self.selectedPlayer.name = textField.text
+    } else {
+      self.selectedPlayer.lastName = textField.text
+    }
+  }
+  
+  
+  
 }
