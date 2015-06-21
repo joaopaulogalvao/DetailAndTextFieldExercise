@@ -106,15 +106,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vLR-4u-TnG">
+                                <rect key="frame" x="236" y="236" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="xvF-Aa-ZZC"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A03-9A-jXg">
+                                <rect key="frame" x="277" y="506" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="vLR-4u-TnG" secondAttribute="centerX" id="2AI-61-N3t"/>
                             <constraint firstAttribute="centerX" secondItem="Bi8-My-KSJ" secondAttribute="centerX" id="DB6-Vb-GQN"/>
                             <constraint firstAttribute="centerX" secondItem="82e-Qc-2kU" secondAttribute="centerX" id="G6w-M1-oAL"/>
+                            <constraint firstAttribute="centerY" secondItem="vLR-4u-TnG" secondAttribute="centerY" id="KCm-87-ACw"/>
                             <constraint firstItem="Bi8-My-KSJ" firstAttribute="leading" secondItem="82e-Qc-2kU" secondAttribute="leading" id="W3u-s7-FAS"/>
                             <constraint firstItem="Bi8-My-KSJ" firstAttribute="trailing" secondItem="82e-Qc-2kU" secondAttribute="trailing" id="YLT-Pg-qbi"/>
                             <constraint firstItem="Bi8-My-KSJ" firstAttribute="top" secondItem="82e-Qc-2kU" secondAttribute="bottom" constant="29" id="a3u-fS-4bR"/>
                             <constraint firstItem="82e-Qc-2kU" firstAttribute="top" secondItem="L30-3G-U83" secondAttribute="bottom" constant="42" id="blS-M2-R5E"/>
+                            <constraint firstItem="vLR-4u-TnG" firstAttribute="top" secondItem="Bi8-My-KSJ" secondAttribute="bottom" constant="41" id="gHU-bt-YL3"/>
                         </constraints>
                     </view>
                     <connections>
