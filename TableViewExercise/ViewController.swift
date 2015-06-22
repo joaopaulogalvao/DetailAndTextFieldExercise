@@ -47,6 +47,11 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     greatFootBallPlayers = [sherman,wilson,lynch,chancellor,graham]
     
   }
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    self.tableView.reloadData()
+  }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
@@ -107,20 +112,29 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     if segue.identifier == "ShowDetailSegue"{
       
-      let personDetailViewController = segue.destinationViewController as! DetailViewController
-      
-      //grab the selected indexPath from the TableView
-      let selectedIndexPath = self.tableView.indexPathForSelectedRow()
-      
-      //grab the selected person using the indexPath as the index in the players array
-      let selectedBasketballPlayer = self.greatBasketPlayers[selectedIndexPath!.row]
-      let selectedFootballPlayer = self.greatFootBallPlayers[selectedIndexPath!.row]
-      
-      //Set destinationViewController player propery to reference the selected player
-      if selectedIndexPath!.section == 0{
-        personDetailViewController.selectedPlayer = selectedBasketballPlayer
-      }else{
-        personDetailViewController.selectedPlayer = selectedFootballPlayer
+      if let personDetailViewController = segue.destinationViewController as? DetailViewController {
+        
+        //grab the selected indexPath from the TableView
+        let mySelectedIndexPath = self.tableView.indexPathForSelectedRow()
+        
+        if let selectedIndexPath = self.tableView.indexPathForSelectedRow() {
+          
+          let selectedRow = selectedIndexPath.row
+          
+          //grab the selected person using the indexPath as the index in the players array
+          let selectedBasketballPlayer = self.greatBasketPlayers[selectedRow]
+          let selectedFootballPlayer = self.greatFootBallPlayers[selectedRow]
+          
+          //Set destinationViewController player propery to reference the selected player
+          if selectedIndexPath.section == 0{
+            personDetailViewController.selectedPlayer = selectedBasketballPlayer
+          }else{
+            personDetailViewController.selectedPlayer = selectedFootballPlayer
+          }
+          
+        }
+        
+        
       }
       
     }

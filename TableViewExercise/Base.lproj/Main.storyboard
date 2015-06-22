@@ -24,7 +24,7 @@
         <!--View Controller-->
         <scene sceneID="1Ux-Zg-usF">
             <objects>
-                <viewController id="HCw-0b-vve" customClass="ViewController" customModule="TableViewExercise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HCw-0b-vve" customClass="ViewController" customModule="DetailAndTextFieldExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mU1-u5-CcH"/>
                         <viewControllerLayoutGuide type="bottom" id="z8z-24-4VP"/>
@@ -84,7 +84,7 @@
         <!--Detail View Controller-->
         <scene sceneID="WUG-Tm-DQU">
             <objects>
-                <viewController id="drT-zv-zi1" customClass="DetailViewController" customModule="TableViewExercise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="drT-zv-zi1" customClass="DetailViewController" customModule="DetailAndTextFieldExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L30-3G-U83"/>
                         <viewControllerLayoutGuide type="bottom" id="7c9-jf-Frt"/>
@@ -93,39 +93,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dif-6c-ntM">
-                                <rect key="frame" x="279" y="289" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NrH-H3-Wkb">
-                                <rect key="frame" x="279" y="329" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbs-SA-oWk">
-                                <rect key="frame" x="352" y="329" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="82e-Qc-2kU">
+                                <rect key="frame" x="252" y="106" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bi8-My-KSJ">
+                                <rect key="frame" x="252" y="165" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="KQg-vX-8ZO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cbs-SA-oWk" firstAttribute="leading" secondItem="NrH-H3-Wkb" secondAttribute="trailing" constant="31" id="DJJ-6U-KqI"/>
-                            <constraint firstItem="NrH-H3-Wkb" firstAttribute="leading" secondItem="dif-6c-ntM" secondAttribute="leading" id="EDM-lG-IgX"/>
-                            <constraint firstItem="NrH-H3-Wkb" firstAttribute="top" secondItem="dif-6c-ntM" secondAttribute="bottom" constant="19" id="EVA-Rz-4ft"/>
-                            <constraint firstItem="cbs-SA-oWk" firstAttribute="baseline" secondItem="NrH-H3-Wkb" secondAttribute="baseline" id="H0B-31-sf2"/>
-                            <constraint firstAttribute="centerY" secondItem="dif-6c-ntM" secondAttribute="centerY" id="ZYD-kA-odf"/>
-                            <constraint firstAttribute="centerX" secondItem="dif-6c-ntM" secondAttribute="centerX" id="twz-7G-5N4"/>
+                            <constraint firstAttribute="centerX" secondItem="Bi8-My-KSJ" secondAttribute="centerX" id="DB6-Vb-GQN"/>
+                            <constraint firstAttribute="centerX" secondItem="82e-Qc-2kU" secondAttribute="centerX" id="G6w-M1-oAL"/>
+                            <constraint firstItem="Bi8-My-KSJ" firstAttribute="leading" secondItem="82e-Qc-2kU" secondAttribute="leading" id="W3u-s7-FAS"/>
+                            <constraint firstItem="Bi8-My-KSJ" firstAttribute="trailing" secondItem="82e-Qc-2kU" secondAttribute="trailing" id="YLT-Pg-qbi"/>
+                            <constraint firstItem="Bi8-My-KSJ" firstAttribute="top" secondItem="82e-Qc-2kU" secondAttribute="bottom" constant="29" id="a3u-fS-4bR"/>
+                            <constraint firstItem="82e-Qc-2kU" firstAttribute="top" secondItem="L30-3G-U83" secondAttribute="bottom" constant="42" id="blS-M2-R5E"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="labelAge" destination="cbs-SA-oWk" id="jYO-2o-geu"/>
-                        <outlet property="labelLastName" destination="NrH-H3-Wkb" id="v1e-4s-Iq1"/>
-                        <outlet property="labelName" destination="dif-6c-ntM" id="wQm-0p-Qg9"/>
+                        <outlet property="txtFieldFirstName" destination="82e-Qc-2kU" id="vGc-F2-PIw"/>
+                        <outlet property="txtFieldLastName" destination="Bi8-My-KSJ" id="Djz-VR-4DL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tjh-Iy-Wd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
