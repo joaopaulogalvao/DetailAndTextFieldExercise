@@ -13,6 +13,7 @@ class DetailViewController: UIViewController,UITextFieldDelegate, UIImagePickerC
   
   @IBOutlet weak var txtFieldFirstName: UITextField!
   @IBOutlet weak var txtFieldLastName: UITextField!
+  @IBOutlet weak var imageView: UIImageView!
   
   var selectedPlayer: Person!
   
@@ -53,6 +54,53 @@ class DetailViewController: UIViewController,UITextFieldDelegate, UIImagePickerC
     }
   }
   
+  @IBAction func buttonPressed(sender: AnyObject) {
+    
+    let imagePickerController = UIImagePickerController()
+    imagePickerController.delegate = self
+    imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+    imagePickerController.allowsEditing = true
+    
+    if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+      self.presentViewController(imagePickerController, animated: true, completion: nil)
+    }
+    
+  }
+  
+  
   
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

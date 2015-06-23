@@ -112,14 +112,19 @@
                                     <constraint firstAttribute="width" constant="128" id="xvF-Aa-ZZC"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A03-9A-jXg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A03-9A-jXg">
                                 <rect key="frame" x="277" y="506" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="drT-zv-zi1" eventType="touchUpInside" id="sDY-Ac-NXR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="vLR-4u-TnG" secondAttribute="centerX" id="2AI-61-N3t"/>
+                            <constraint firstItem="7c9-jf-Frt" firstAttribute="top" secondItem="A03-9A-jXg" secondAttribute="bottom" constant="64" id="5ke-bN-1jb"/>
+                            <constraint firstAttribute="centerX" secondItem="A03-9A-jXg" secondAttribute="centerX" id="C4s-cR-jRZ"/>
                             <constraint firstAttribute="centerX" secondItem="Bi8-My-KSJ" secondAttribute="centerX" id="DB6-Vb-GQN"/>
                             <constraint firstAttribute="centerX" secondItem="82e-Qc-2kU" secondAttribute="centerX" id="G6w-M1-oAL"/>
                             <constraint firstAttribute="centerY" secondItem="vLR-4u-TnG" secondAttribute="centerY" id="KCm-87-ACw"/>
@@ -131,6 +136,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="vLR-4u-TnG" id="snN-fy-l8u"/>
                         <outlet property="txtFieldFirstName" destination="82e-Qc-2kU" id="vGc-F2-PIw"/>
                         <outlet property="txtFieldLastName" destination="Bi8-My-KSJ" id="Djz-VR-4DL"/>
                     </connections>
