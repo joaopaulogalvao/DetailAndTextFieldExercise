@@ -93,47 +93,120 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="82e-Qc-2kU">
-                                <rect key="frame" x="252" y="106" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bi8-My-KSJ">
-                                <rect key="frame" x="252" y="165" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="82e-Qc-2kU">
+                                <rect key="frame" x="255" y="72" width="91" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="KQg-vX-8ZO"/>
+                                    <constraint firstAttribute="width" constant="97" id="M4q-HF-x3d"/>
+                                    <constraint firstAttribute="height" constant="30" id="Pe0-gS-yDz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="M4q-HF-x3d"/>
+                                        <exclude reference="Pe0-gS-yDz"/>
+                                    </mask>
+                                </variation>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vLR-4u-TnG">
-                                <rect key="frame" x="236" y="236" width="128" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vLR-4u-TnG">
+                                <rect key="frame" x="250" y="148" width="100" height="100"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="8AR-tB-v88"/>
+                                    <constraint firstAttribute="height" constant="128" id="I9U-Q4-rGl"/>
+                                    <constraint firstAttribute="width" constant="100" id="M3H-d3-fjl"/>
+                                    <constraint firstAttribute="width" constant="100" id="UgB-Dt-wp1"/>
+                                    <constraint firstAttribute="width" constant="128" id="hTY-FN-qt4"/>
+                                    <constraint firstAttribute="height" constant="100" id="k0D-Ks-MAw"/>
                                     <constraint firstAttribute="width" constant="128" id="xvF-Aa-ZZC"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="I9U-Q4-rGl"/>
+                                        <exclude reference="UgB-Dt-wp1"/>
+                                        <exclude reference="hTY-FN-qt4"/>
+                                        <exclude reference="k0D-Ks-MAw"/>
+                                        <exclude reference="xvF-Aa-ZZC"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A03-9A-jXg">
-                                <rect key="frame" x="277" y="506" width="46" height="30"/>
+                                <rect key="frame" x="277" y="562" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="drT-zv-zi1" eventType="touchUpInside" id="sDY-Ac-NXR"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bi8-My-KSJ">
+                                <rect key="frame" x="255" y="110" width="91" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="4ff-Rz-Ml6"/>
+                                    <constraint firstAttribute="width" constant="91" id="5hr-V6-Ro7"/>
+                                    <constraint firstAttribute="width" constant="97" id="KQg-vX-8ZO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4ff-Rz-Ml6"/>
+                                        <exclude reference="KQg-vX-8ZO"/>
+                                    </mask>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="vLR-4u-TnG" secondAttribute="centerX" id="1F5-4L-MlF"/>
                             <constraint firstAttribute="centerX" secondItem="vLR-4u-TnG" secondAttribute="centerX" id="2AI-61-N3t"/>
+                            <constraint firstItem="Bi8-My-KSJ" firstAttribute="top" secondItem="82e-Qc-2kU" secondAttribute="bottom" constant="8" symbolic="YES" id="3qQ-cY-ofe"/>
+                            <constraint firstItem="7c9-jf-Frt" firstAttribute="top" secondItem="A03-9A-jXg" secondAttribute="bottom" constant="8" id="5Mf-B3-rEd"/>
+                            <constraint firstItem="vLR-4u-TnG" firstAttribute="top" secondItem="Bi8-My-KSJ" secondAttribute="bottom" constant="8" symbolic="YES" id="5ak-LT-GSt"/>
                             <constraint firstItem="7c9-jf-Frt" firstAttribute="top" secondItem="A03-9A-jXg" secondAttribute="bottom" constant="64" id="5ke-bN-1jb"/>
                             <constraint firstAttribute="centerX" secondItem="A03-9A-jXg" secondAttribute="centerX" id="C4s-cR-jRZ"/>
+                            <constraint firstItem="Bi8-My-KSJ" firstAttribute="leading" secondItem="82e-Qc-2kU" secondAttribute="leading" id="D7Z-uy-BsB"/>
                             <constraint firstAttribute="centerX" secondItem="Bi8-My-KSJ" secondAttribute="centerX" id="DB6-Vb-GQN"/>
+                            <constraint firstItem="vLR-4u-TnG" firstAttribute="top" secondItem="Bi8-My-KSJ" secondAttribute="bottom" constant="41" id="EAc-ok-Elm"/>
                             <constraint firstAttribute="centerX" secondItem="82e-Qc-2kU" secondAttribute="centerX" id="G6w-M1-oAL"/>
-                            <constraint firstAttribute="centerY" secondItem="vLR-4u-TnG" secondAttribute="centerY" id="KCm-87-ACw"/>
+                            <constraint firstAttribute="centerY" secondItem="vLR-4u-TnG" secondAttribute="centerY" constant="14" id="KCm-87-ACw"/>
+                            <constraint firstItem="A03-9A-jXg" firstAttribute="top" secondItem="vLR-4u-TnG" secondAttribute="bottom" constant="170" id="MSJ-Tj-07b"/>
+                            <constraint firstItem="Bi8-My-KSJ" firstAttribute="leading" secondItem="82e-Qc-2kU" secondAttribute="leading" id="NQM-Af-xMK"/>
+                            <constraint firstItem="82e-Qc-2kU" firstAttribute="top" secondItem="L30-3G-U83" secondAttribute="bottom" constant="8" id="UvQ-Oa-dxH"/>
+                            <constraint firstItem="Bi8-My-KSJ" firstAttribute="trailing" secondItem="82e-Qc-2kU" secondAttribute="trailing" id="VzU-4c-2kO"/>
                             <constraint firstItem="Bi8-My-KSJ" firstAttribute="leading" secondItem="82e-Qc-2kU" secondAttribute="leading" id="W3u-s7-FAS"/>
+                            <constraint firstItem="Bi8-My-KSJ" firstAttribute="top" secondItem="82e-Qc-2kU" secondAttribute="bottom" constant="29" id="WlV-TA-U8s"/>
                             <constraint firstItem="Bi8-My-KSJ" firstAttribute="trailing" secondItem="82e-Qc-2kU" secondAttribute="trailing" id="YLT-Pg-qbi"/>
                             <constraint firstItem="Bi8-My-KSJ" firstAttribute="top" secondItem="82e-Qc-2kU" secondAttribute="bottom" constant="29" id="a3u-fS-4bR"/>
                             <constraint firstItem="82e-Qc-2kU" firstAttribute="top" secondItem="L30-3G-U83" secondAttribute="bottom" constant="42" id="blS-M2-R5E"/>
                             <constraint firstItem="vLR-4u-TnG" firstAttribute="top" secondItem="Bi8-My-KSJ" secondAttribute="bottom" constant="41" id="gHU-bt-YL3"/>
+                            <constraint firstItem="vLR-4u-TnG" firstAttribute="top" secondItem="Bi8-My-KSJ" secondAttribute="bottom" constant="41" id="k89-PS-Bxl"/>
+                            <constraint firstItem="vLR-4u-TnG" firstAttribute="top" relation="lessThanOrEqual" secondItem="Bi8-My-KSJ" secondAttribute="bottom" constant="41" id="mKf-gI-sfd"/>
+                            <constraint firstAttribute="centerX" secondItem="82e-Qc-2kU" secondAttribute="centerX" id="oWF-AT-Dgv"/>
+                            <constraint firstAttribute="centerX" secondItem="A03-9A-jXg" secondAttribute="centerX" id="rxs-rv-lcb"/>
+                            <constraint firstItem="Bi8-My-KSJ" firstAttribute="top" secondItem="82e-Qc-2kU" secondAttribute="bottom" constant="8" id="s3B-Hz-MlE"/>
+                            <constraint firstItem="Bi8-My-KSJ" firstAttribute="trailing" secondItem="82e-Qc-2kU" secondAttribute="trailing" id="xZ7-ug-RzF"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="G6w-M1-oAL"/>
+                                <exclude reference="blS-M2-R5E"/>
+                                <exclude reference="D7Z-uy-BsB"/>
+                                <exclude reference="DB6-Vb-GQN"/>
+                                <exclude reference="W3u-s7-FAS"/>
+                                <exclude reference="WlV-TA-U8s"/>
+                                <exclude reference="YLT-Pg-qbi"/>
+                                <exclude reference="a3u-fS-4bR"/>
+                                <exclude reference="s3B-Hz-MlE"/>
+                                <exclude reference="xZ7-ug-RzF"/>
+                                <exclude reference="2AI-61-N3t"/>
+                                <exclude reference="EAc-ok-Elm"/>
+                                <exclude reference="KCm-87-ACw"/>
+                                <exclude reference="gHU-bt-YL3"/>
+                                <exclude reference="k89-PS-Bxl"/>
+                                <exclude reference="mKf-gI-sfd"/>
+                                <exclude reference="5ke-bN-1jb"/>
+                                <exclude reference="C4s-cR-jRZ"/>
+                                <exclude reference="MSJ-Tj-07b"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="vLR-4u-TnG" id="snN-fy-l8u"/>
