@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Person {
+class Person: NSObject, NSCoding {
   var name: String
   var lastName: String
   var age: Int
@@ -18,6 +18,20 @@ class Person {
     self.name = name
     self.lastName = lastName
     self.age = age
+  }
+  
+  required init(coder aDecoder: NSCoder) {
+    self.name = aDecoder.decodeObjectForKey("name") as!String
+    self.lastName = aDecoder.decodeObjectForKey("lastName") as! String
+    self.age = aDecoder.decodeObjectForKey("age") as! Int
+    self.image = aDecoder.decodeObjectForKey("image") as? UIImage
+  }
+  
+  func encodeWithCoder(aCoder: NSCoder) {
+    aCoder.encodeObject(self.name, forKey: "name")
+    aCoder.encodeObject(self.lastName, forKey: "lastName")
+    aCoder.encodeObject(self.age, forKey: "age")
+    aCoder.encodeObject(self.image, forKey: "image")
   }
   
 }

@@ -71,6 +71,7 @@ class DetailViewController: UIViewController,UITextFieldDelegate, UIImagePickerC
     
     let image = info[UIImagePickerControllerEditedImage] as! UIImage
     self.imageView.image = image
+    self.selectedPlayer.image = image
     
     picker.dismissViewControllerAnimated(true, completion: nil)
   }

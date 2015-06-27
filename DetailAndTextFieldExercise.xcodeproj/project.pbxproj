@@ -10,6 +10,7 @@
 		6CA3FDAD1B3E39E8001B2510 /* People.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CA3FDAC1B3E39E8001B2510 /* People.plist */; };
 		6CA3FDAF1B3E415B001B2510 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA3FDAE1B3E415B001B2510 /* PersonCell.swift */; };
 		6CA3FDB11B3F44C9001B2510 /* seahawks.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CA3FDB01B3F44C9001B2510 /* seahawks.png */; };
+		6CA3FDB51B3F5105001B2510 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CA3FDB41B3F5105001B2510 /* placeholder.jpg */; };
 		6CAC3DA21B2A53A900E0388F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAC3DA11B2A53A900E0388F /* DetailViewController.swift */; };
 		6CD973BC1B27DB1E009D911B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD973BB1B27DB1E009D911B /* AppDelegate.swift */; };
 		6CD973BE1B27DB1E009D911B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD973BD1B27DB1E009D911B /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 		6CA3FDAC1B3E39E8001B2510 /* People.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = People.plist; sourceTree = "<group>"; };
 		6CA3FDAE1B3E415B001B2510 /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		6CA3FDB01B3F44C9001B2510 /* seahawks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = seahawks.png; path = Assets/seahawks.png; sourceTree = SOURCE_ROOT; };
+		6CA3FDB41B3F5105001B2510 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpg; path = Assets/placeholder.jpg; sourceTree = SOURCE_ROOT; };
 		6CAC3DA11B2A53A900E0388F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6CD973B61B27DB1E009D911B /* DetailAndTextFieldExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetailAndTextFieldExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CD973BA1B27DB1E009D911B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		6CD973B91B27DB1E009D911B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6CA3FDB41B3F5105001B2510 /* placeholder.jpg */,
 				6CA3FDB01B3F44C9001B2510 /* seahawks.png */,
 				6CD973BA1B27DB1E009D911B /* Info.plist */,
 			);
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CD973C11B27DB1E009D911B /* Main.storyboard in Resources */,
+				6CA3FDB51B3F5105001B2510 /* placeholder.jpg in Resources */,
 				6CD973C61B27DB1E009D911B /* LaunchScreen.xib in Resources */,
 				6CA3FDB11B3F44C9001B2510 /* seahawks.png in Resources */,
 				6CD973C31B27DB1E009D911B /* Images.xcassets in Resources */,
