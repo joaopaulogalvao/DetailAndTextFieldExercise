@@ -20,7 +20,13 @@ class ViewController: UIViewController, UITableViewDataSource {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-    loadPeopleFromPlist()
+    if let peopleFromArchive = self.loadFromArchive() {
+      self.greatFootBallPlayers = peopleFromArchive
+    } else {
+      self.loadPeopleFromPlist()
+      self.saveToArchive()
+    }
+    
     //Setup the dataSource
     self.tableView.dataSource = self
     
@@ -46,6 +52,7 @@ class ViewController: UIViewController, UITableViewDataSource {
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
+    self.saveToArchive()
     self.tableView.reloadData()
   }
 
@@ -72,6 +79,12 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! PersonCell
     
+    //Layer
+    cell.imgViewPhoto.layer.cornerRadius = 25
+    cell.imgViewPhoto.layer.masksToBounds = true;
+    cell.imgViewPhoto.layer.borderWidth = 1
+    cell.imgViewPhoto.layer.borderColor = UIColor.blackColor().CGColor
+    
     //Display players names
     let nameToDisplay = self.greatFootBallPlayers[indexPath.row]
     
@@ -85,6 +98,12 @@ class ViewController: UIViewController, UITableViewDataSource {
     cell.labelLastName.text = nameToDisplay.lastName
     //Add age if needed later
     
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    
+    if let lastSelectedName = userDefaults.objectForKey("LastSelected") as? String where lastSelectedName == nameToDisplay.name  {
+      
+      cell.backgroundColor = UIColor.lightGrayColor()
+    }
     //Convert ages to String
 //    var myAgeToDisplay = String(nameToDisplay.age)
 //    cell.detailTextLabel?.text = myAgeToDisplay
@@ -110,6 +129,10 @@ class ViewController: UIViewController, UITableViewDataSource {
           
           //Set destinationViewController player propery to reference the selected player
             personDetailViewController.selectedPlayer = selectedFootballPlayer
+          
+          let userDefaults = NSUserDefaults.standardUserDefaults()
+          userDefaults.setObject(selectedFootballPlayer.name, forKey: "LastSelected")
+          userDefaults.synchronize()
         }
 
       }
@@ -117,6 +140,29 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
   }
+  
+  func saveToArchive() {
+    
+    if let archivePath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last as? String {
+      println(archivePath)
+      NSKeyedArchiver.archiveRootObject(self.greatFootBallPlayers, toFile: archivePath + "/archive")
+    }
+  }
+  
+  func loadFromArchive() -> [Person]? {
+    
+    if let archivePath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last as? String {
+      
+      if let peopleFromArchive = NSKeyedUnarchiver.unarchiveObjectWithFile(archivePath + "/archive") as? [Person] {
+        return peopleFromArchive
+      }
+      
+    }
+    return nil
+    
+  }
+  
+  
 
 }
 
