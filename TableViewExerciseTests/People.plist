@@ -3,25 +3,33 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>firstName</key>
+		<key>age</key>
+		<integer>34</integer>
+		<key>name</key>
 		<string>Russel</string>
 		<key>lastName</key>
 		<string>Wilson</string>
 	</dict>
 	<dict>
-		<key>firstName</key>
+		<key>age</key>
+		<integer>29</integer>
+		<key>name</key>
 		<string>Richard</string>
 		<key>lastName</key>
 		<string>Sherman</string>
 	</dict>
 	<dict>
-		<key>firstName</key>
+		<key>age</key>
+		<integer>36</integer>
+		<key>name</key>
 		<string>Kam</string>
 		<key>lastName</key>
 		<string>Chancelor</string>
 	</dict>
 	<dict>
-		<key>firstName</key>
+		<key>age</key>
+		<integer>56</integer>
+		<key>name</key>
 		<string>Pete</string>
 		<key>lastName</key>
 		<string>Carroll</string>

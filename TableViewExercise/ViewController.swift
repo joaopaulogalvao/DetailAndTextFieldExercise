@@ -8,44 +8,40 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource {
 
   
   @IBOutlet weak var tableView: UITableView!
   
-  var greatBasketPlayers = [Person]()
   var greatFootBallPlayers = [Person]()
   
-  let numberOfSections = 2
   
  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-    
+    loadPeopleFromPlist()
     //Setup the dataSource
     self.tableView.dataSource = self
     
-    //Create Basketball player objects
-    var jordan = Person(name: "Michael", lastName:"Jordan", age: 45)
-    var johnson = Person(name: "Magic",lastName:"Johnson", age: 50)
-    var bird = Person(name: "Larry", lastName:"Bird",age: 60)
-    var bryant = Person(name: "Kobe",lastName:"Bryant", age: 36)
-    var james = Person(name: "Lebron",lastName:"James", age: 34)
+  }
+  
+  func loadPeopleFromPlist() {
     
-    //Add Basketball players objects to the Array
-     greatBasketPlayers = [jordan,johnson,bird,bryant,james]
-    
-    //Create Football player objects
-    var sherman = Person(name: "Richard",lastName:"Sherman", age: 29)
-    var wilson = Person(name: "Russell",lastName:" Wilson", age: 30)
-    var lynch = Person(name: "Marshawn", lastName:"Lynch", age: 27)
-    var chancellor = Person(name: "Kameron",lastName:"Chancellor", age: 34)
-    var graham = Person(name: "Jimmy",lastName:"Graham", age: 32)
-    
-    //Add Football players objects to the Array
-    greatFootBallPlayers = [sherman,wilson,lynch,chancellor,graham]
-    
+    if let peoplePath = NSBundle.mainBundle().pathForResource("People", ofType: "plist"),
+      peopleObjects = NSArray(contentsOfFile: peoplePath) as? [[String : AnyObject]]
+    {
+      for object in peopleObjects {
+        
+        if let name = object["name"] as? String,
+          lastName = object["lastName"] as? String,
+          //Add age if needed later
+          age = object["age"] as? Int {
+            let person = Person(name: name, lastName: lastName, age: age)
+            self.greatFootBallPlayers.append(person)
+        }
+      }
+    }
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -58,53 +54,41 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     // Dispose of any resources that can be recreated.
   }
   
-  //Number of Sections
-  func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    
-    return self.numberOfSections
-  }
   
   //Number of Rows
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-    return greatBasketPlayers.count
+    return self.greatFootBallPlayers.count
   }
   
   //Title for headers
   func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    if section == 0 {
-      return "Great Basketball Players (Name:Last Name:Age)"
-    } else {
-      return "Great Football Players(Name:Last Name:Age)"
-    }
+    
+      return "Great Football Players"
   }
   
   //Populate all cells
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
-    let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+    let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! PersonCell
     
-    if indexPath.section == 0 {
-      
-      //Display players names
-      let nameToDisplay = self.greatBasketPlayers[indexPath.row]
-      cell.textLabel?.text = "\(nameToDisplay.name) \(nameToDisplay.lastName)"
-      
-      //Convert ages to String
-      var myAgeToDisplay = String(nameToDisplay.age)
-      cell.detailTextLabel?.text = myAgeToDisplay
-      
-    } else {
-      
-      //Display players names
-      let nameToDisplay = self.greatFootBallPlayers[indexPath.row]
-      cell.textLabel?.text = "\(nameToDisplay.name) \(nameToDisplay.lastName)"
-      
-      //Convert ages to String
-      var myAgeToDisplay = String(nameToDisplay.age)
-      cell.detailTextLabel?.text = myAgeToDisplay
-      
+    //Display players names
+    let nameToDisplay = self.greatFootBallPlayers[indexPath.row]
+    
+    //with optional binding
+    if let image = nameToDisplay.image {
+      cell.imgViewPhoto.image = image
     }
+    
+    
+    cell.labelName.text = nameToDisplay.name
+    cell.labelLastName.text = nameToDisplay.lastName
+    //Add age if needed later
+    
+    //Convert ages to String
+//    var myAgeToDisplay = String(nameToDisplay.age)
+//    cell.detailTextLabel?.text = myAgeToDisplay
+    
     return cell
   }
   
@@ -122,19 +106,12 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
           let selectedRow = selectedIndexPath.row
           
           //grab the selected person using the indexPath as the index in the players array
-          let selectedBasketballPlayer = self.greatBasketPlayers[selectedRow]
           let selectedFootballPlayer = self.greatFootBallPlayers[selectedRow]
           
           //Set destinationViewController player propery to reference the selected player
-          if selectedIndexPath.section == 0{
-            personDetailViewController.selectedPlayer = selectedBasketballPlayer
-          }else{
             personDetailViewController.selectedPlayer = selectedFootballPlayer
-          }
-          
         }
-        
-        
+
       }
       
     }
