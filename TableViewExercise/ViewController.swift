@@ -64,7 +64,7 @@ class ViewController: UIViewController, UITableViewDataSource {
   //Title for headers
   func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     
-      return "Great Football Players"
+      return "Seattle Seahawks"
   }
   
   //Populate all cells
