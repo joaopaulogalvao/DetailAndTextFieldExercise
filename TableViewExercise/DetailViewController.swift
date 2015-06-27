@@ -28,6 +28,7 @@ class DetailViewController: UIViewController,UITextFieldDelegate, UIImagePickerC
     
     self.txtFieldFirstName.text = self.selectedPlayer.name
     self.txtFieldLastName.text = self.selectedPlayer.lastName
+    self.imageView.image = self.selectedPlayer.image
     
     
     // Do any additional setup after loading the view.
